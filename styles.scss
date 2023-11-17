@@ -51,7 +51,7 @@ body {
       background: #ECF0F3;
     }
     nav.navbar {
-      border-top: 4px solid #276cda;
+      border-top: 4px solid #ffae00;
       margin-bottom: 1rem;
     }
     .navbar-item.brand-text {
@@ -61,6 +61,17 @@ body {
       font-size: 14px;
       font-weight: 700;
     }
+    .container {
+        height: 100px; /* Cambia a la anchura deseada */
+      }
+      #containerContenido {
+        margin-top: 3%;
+        text-align: center; /* Centra el contenido */
+      }
+      #containerContenido h1 {
+        margin-top: 2%;
+font-size: 35px;
+      }
     .columns {
       width: 100%;
       height: 100%;
@@ -101,9 +112,7 @@ body {
       color: #8F99A3;
     }
     .hero.welcome.is-info {
-      background: #36D1DC;
-      background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
-      background: linear-gradient(to right, #5B86E5, #36D1DC);
+      background: #dc9436;
     }
     .hero.welcome .title, .hero.welcome .subtitle {
       color: hsl(192, 17%, 99%);
