@@ -1,195 +1,241 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>DoblaoShop</title>
-</head>
-<body>
- <!-- START NAV -->
- <nav class="navbar is-white">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item brand-text" href="../index.html">
-      Doblao Shop
-    </a>
-            <div class="navbar-burger burger" data-target="navMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div id="navMenu" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="admin.html">
-        Home
-      </a>
-                <a class="navbar-item" href="admin.html">
-        Juegos
-      </a>
-                <a class="navbar-item" href="admin.html">
-        Electrónica
-      </a>
-                <a class="navbar-item" href="admin.html">
-        Juegos de mesa
-      </a>
-            </div>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DoblaoShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<style>
+    #navMenu {
+        height: 100px;
+        background-color: #303030;
+    }
+    /*change all the is-primary for background-color: #303030;*/
+</style>
+
+<body>
+    <nav class="navbar has-shadow is-primary">
+        <div class="navbar-brand pl-4">
+            <a href="index.html" class="navbar-item">
+                <img src="assets/logo.png" alt="" style="max-height: 90px;">
+                <h1 class="title is-capitalized pl-4">DoblaoShop</h1>
+            </a>
+            <a class="navbar-burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </div>
-    </div>
-</nav>
-<!-- END NAV -->
-<div class="container" id="containerContenido">
-    <div class="columns">
-        <div class="column is-3 ">
-            <aside class="menu is-hidden-mobile">
-                <ul class="menu-list">
-                <p class="menu-label">
-                    Juegos
-                </p>
-                <ul class="menu-list">
-                    <li><a>Ps5</a></li>
-                    <li><a>Switch</a></li>
-                    <li><a>Xbox Series S</a></li>
-                    <li><a>PC</a></li>
-                </ul>
-                <ul class="menu-list">
-                    <p class="menu-label">
-                        Electrónica
-                    </p>
-                    <ul class="menu-list">
-                        <li><a>Telefonía</a></li>
-                        <li><a>PC</a></li>
-                        <li><a>Accesorios</a></li>
-                        <li><a>Cables</a></li>
-                    </ul>
-                    <ul class="menu-list">
-                        <p class="menu-label">
-                            Juegos de mesa
-                        </p>
-                        <ul class="menu-list">
-                            <li><a>Rol</a></li>
-                            <li><a>Aventuras</a></li>
-                            <li><a>Multijugador</a></li>
-                            <li><a>Solitario</a></li>
-                        </ul>
-            </aside>
+        <div class="navbar-menu pr-4" id="navMenu">
+            <div class="navbar-end">
+                <a href="" class="navbar-item">Home</a>
+                <a href="" class="navbar-item">Novedades</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="" class="navbar-link">Videojuegos</a>
+                    <div class="navbar-dropdown">
+                        <a href="" class="navbar-item">PC</a>
+                        <a href="" class="navbar-item">Nes</a>
+                        <a href="" class="navbar-item">Super Nintendo</a>
+                        <a href="" class="navbar-item">Game Cube</a>
+                        <a href="" class="navbar-item">Wii</a>
+                        <a href="" class="navbar-item">WiiU</a>
+                        <a href="" class="navbar-item">Switch</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="column is-9">
+    </nav>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline is-vcentered">
+                <!-- Menú lateral -->
+                <div class="column is-3-desktop is-12-mobile">
+                    <div class="card" style="height: 500px;">
+                        <div class="card-content">
+                            <p class="title is-4">Top Ventas (histórico)</p>
+                            <!-- Contenido de tu menú lateral aquí -->
+                            <ul>
+                                <li><a href="#">Pokemon Oro HeartGold</a></li>
+                                <li><a href="#">Pokemon Blanco</a></li>
+                                <li><a href="#">Pokemon Pimball</a></li>
+                                <li><a href="#">Pokemon Negro</a></li>
+                                <li><a href="#">Pokemon Plata Soulsilver</a></li>
+                                <li><a href="#">Pokemon Zafiro</a></li>
+                                <!-- Agrega más opciones según sea necesario -->
+                            </ul>
+                            <hr>
+                            <p class="title is-4">Top Ventas (actual)</p>
+                            <!-- Contenido de tu menú lateral aquí -->
+                            <ul>
+                                <li><a href="#">Pokemon Púrpura</a></li>
+                                <li><a href="#">Pokemon Escarlata</a></li>
+                                <li><a href="#">Pokemon Leyendas: Arceus</a></li>
+                                <li><a href="#">Pokemon Espada</a></li>
+                                <li><a href="#">Pokemon Escudo</a></li>
+                                <li><a href="#">Pokemon Detective Pikachu</a></li>
+                                <!-- Agrega más opciones según sea necesario -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lista de videojuegos -->
+                <div class="column is-9-desktop is-12-mobile">
+                    <div class="columns is-multiline">
+                        <!-- Aquí van tus tarjetas de videojuegos -->
+                        <!-- Puedes copiar y pegar las tarjetas existentes aquí o agregar nuevas -->
+                        <div class="column is-3-desktop is-6-tablet">
+                            <!-- Tarjeta 1 -->
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by5">
+                                        <img src="https://i.3djuegos.com/juegos/4645/pokemon_heartgold/fotos/ficha/pokemon_heartgold-1695787.jpg">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">Pokemon Oro</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 2 -->
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by5">
+                                        <img src="https://i.3djuegos.com/juegos/4644/pokemon_soulsilver/fotos/ficha/pokemon_soulsilver-1695791.jpg">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">Pokemon Plata</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 3 -->
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by5">
+                                        <img src="https://i.3djuegos.com/juegos/5950/pokemon_white/fotos/ficha/pokemon_white-1719610.webp">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">Pokemon Blanco</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tarjeta 4 -->
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by5">
+                                        <img src="https://i.3djuegos.com/juegos/5949/pokemon_black/fotos/ficha/pokemon_black-1719605.jpg">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">Pokemon Negro</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by5">
+                                        <img src="https://i.3djuegos.com/juegos/13662/pok_mon_esmeralda/fotos/ficha/pok_mon_esmeralda-3480597.jpg">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">Pokemon Esmeralda</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by5">
+                                        <img src="https://i.3djuegos.com/juegos/12536/pok_mon_amarillo/fotos/ficha/pok_mon_amarillo-3236387.jpg">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">Pokemon Amarillo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by5">
+                                        <img src="https://i.ebayimg.com/images/g/Q14AAAzyG-RSrQP2/s-l640.jpg">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">Pokemon Pimball</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by5">
+                                        <img src="https://m.media-amazon.com/images/I/61yitnQmuWL._AC_UF894,1000_QL80_.jpg">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-4">Pokemon Ranger</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <section class="hero is-info welcome is-small">
-                <div class="hero-body">
-                    <div class="container">
-                        <h1 class="title">
-                            Hola, bienvenidx de vuelta
-                        </h1>
-                        <h2 class="subtitle">
-                            ¡Disfruta de tus compras en DoblaoShop!
-                        </h2>
-                    </div>
-                </div>
-            </section>
-            <section><h1 class="title-is-centered">Juegos de Pokemon</h1></section>
-            <section class="info-tiles">
-                <div class="tile is-ancestor has-text-centered">
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/4645/pokemon_heartgold/fotos/ficha/pokemon_heartgold-1695787.jpg" alt="">
-                            <p class="title">Pokemon Oro HeartGold</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/4644/pokemon_soulsilver/fotos/ficha/pokemon_soulsilver-1695791.jpg" alt="">
-                            <p class="title">Pokemon Plata SoulSilver</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/5949/pokemon_black/fotos/ficha/pokemon_black-1719605.jpg" alt="">
-                            <p class="title">Pokemon Negro</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/5950/pokemon_white/fotos/ficha/pokemon_white-1719610.webp" alt="">
-                            <p class="title">Pokemon Blanco</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <section class="info-tiles">
-                <div class="tile is-ancestor has-text-centered">
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/4645/pokemon_heartgold/fotos/ficha/pokemon_heartgold-1695787.jpg" alt="">
-                            <p class="title">Pokemon Oro HeartGold</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/4644/pokemon_soulsilver/fotos/ficha/pokemon_soulsilver-1695791.jpg" alt="">
-                            <p class="title">Pokemon Plata SoulSilver</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/5949/pokemon_black/fotos/ficha/pokemon_black-1719605.jpg" alt="">
-                            <p class="title">Pokemon Negro</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/5950/pokemon_white/fotos/ficha/pokemon_white-1719610.webp" alt="">
-                            <p class="title">Pokemon Blanco</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <section class="info-tiles">
-                <div class="tile is-ancestor has-text-centered">
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/4645/pokemon_heartgold/fotos/ficha/pokemon_heartgold-1695787.jpg" alt="">
-                            <p class="title">Pokemon Oro HeartGold</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/4644/pokemon_soulsilver/fotos/ficha/pokemon_soulsilver-1695791.jpg" alt="">
-                            <p class="title">Pokemon Plata SoulSilver</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/5949/pokemon_black/fotos/ficha/pokemon_black-1719605.jpg" alt="">
-                            <p class="title">Pokemon Negro</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child box">
-                            <img src="https://i.3djuegos.com/juegos/5950/pokemon_white/fotos/ficha/pokemon_white-1719610.webp" alt="">
-                            <p class="title">Pokemon Blanco</p>
-                            <p class="subtitle">- Nintendo DS -</p>
-                        </article>
-                    </div>
-                </div>
-            </section>
         </div>
-    </div>
-</div>
-<script src="mybulma/js/bulma.js"></script>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>DoblaoShop</strong> by <a href="#">Pablo Molero Marín</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
+
 </html>
