@@ -5,19 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DoblaoShop</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 </head>
 
 <style>
-    #navMenu {
-        height: 100px;
-        background-color: #303030;
-    }
-    /*change all the is-primary for background-color: #303030;*/
 </style>
 
 <body>
-    <nav class="navbar has-shadow is-primary">
+    <nav class="navbar is-primary">
         <div class="navbar-brand pl-4">
             <a href="index.html" class="navbar-item">
                 <img src="assets/logo.png" alt="" style="max-height: 90px;">
@@ -31,7 +27,7 @@
         </div>
         <div class="navbar-menu pr-4" id="navMenu">
             <div class="navbar-end">
-                <a href="" class="navbar-item">Home</a>
+                <a href="index.html" class="navbar-item">Home</a>
                 <a href="" class="navbar-item">Novedades</a>
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a href="" class="navbar-link">Videojuegos</a>
@@ -52,23 +48,22 @@
         <div class="container">
             <div class="columns is-multiline is-vcentered">
                 <!-- Menú lateral -->
-                <div class="column is-3-desktop is-12-mobile">
+                <div class="column is-3-desktop is-12-mobile" id="menuLateral">
                     <div class="card" style="height: 500px;">
                         <div class="card-content">
                             <p class="title is-4">Top Ventas (histórico)</p>
-                            <!-- Contenido de tu menú lateral aquí -->
+                            <!-- Contenido de menú lateral aquí -->
                             <ul>
-                                <li><a href="#">Pokemon Oro HeartGold</a></li>
+                                <li><a href="detail.html">Pokemon Oro HeartGold</a></li>
                                 <li><a href="#">Pokemon Blanco</a></li>
                                 <li><a href="#">Pokemon Pimball</a></li>
                                 <li><a href="#">Pokemon Negro</a></li>
                                 <li><a href="#">Pokemon Plata Soulsilver</a></li>
                                 <li><a href="#">Pokemon Zafiro</a></li>
-                                <!-- Agrega más opciones según sea necesario -->
                             </ul>
                             <hr>
                             <p class="title is-4">Top Ventas (actual)</p>
-                            <!-- Contenido de tu menú lateral aquí -->
+                            <!-- Contenido de menú lateral aquí -->
                             <ul>
                                 <li><a href="#">Pokemon Púrpura</a></li>
                                 <li><a href="#">Pokemon Escarlata</a></li>
@@ -76,7 +71,6 @@
                                 <li><a href="#">Pokemon Espada</a></li>
                                 <li><a href="#">Pokemon Escudo</a></li>
                                 <li><a href="#">Pokemon Detective Pikachu</a></li>
-                                <!-- Agrega más opciones según sea necesario -->
                             </ul>
                         </div>
                     </div>
@@ -86,23 +80,24 @@
                 <div class="column is-9-desktop is-12-mobile">
                     <div class="columns is-multiline">
                         <!-- Aquí van tus tarjetas de videojuegos -->
-                        <!-- Puedes copiar y pegar las tarjetas existentes aquí o agregar nuevas -->
                         <div class="column is-3-desktop is-6-tablet">
                             <!-- Tarjeta 1 -->
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by5">
-                                        <img src="https://i.3djuegos.com/juegos/4645/pokemon_heartgold/fotos/ficha/pokemon_heartgold-1695787.jpg">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-content">
-                                            <p class="title is-4">Pokemon Oro</p>
+                            <a href="detail.html">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-4by5">
+                                            <img src="https://i.3djuegos.com/juegos/4645/pokemon_heartgold/fotos/ficha/pokemon_heartgold-1695787.jpg" alt="Pokemon Oro HeartGold">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <p class="title is-4">Pokemon Oro</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <!-- Tarjeta 2 -->
                         <div class="column is-3-desktop is-6-tablet">
@@ -155,6 +150,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Tarjeta 5 -->
                         <div class="column is-3-desktop is-6-tablet">
                             <div class="card">
                                 <div class="card-image">
@@ -171,6 +167,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Tarjeta 6 -->
                         <div class="column is-3-desktop is-6-tablet">
                             <div class="card">
                                 <div class="card-image">
@@ -187,6 +184,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Tarjeta 7 -->
                         <div class="column is-3-desktop is-6-tablet">
                             <div class="card">
                                 <div class="card-image">
@@ -203,6 +201,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Tarjeta 8 -->
                         <div class="column is-3-desktop is-6-tablet">
                             <div class="card">
                                 <div class="card-image">
@@ -226,16 +225,17 @@
         </div>
     </section>
 
+<!-- Pie de página -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>DoblaoShop</strong> by <a href="#">Pablo Molero Marín</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                <strong class="has-text-warning">DoblaoShop</strong> by <a href="" class="has-text-info">Pablo Molero Marín</a>. El código fuente está ligado a la licencia
+                <a href="http://opensource.org/licenses/mit-license.php" class="has-text-info">MIT</a>. El contenido de la página
+                está registrado.
             </p>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="assets/index.js"></script>
 </body>
 
 </html>

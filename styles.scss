@@ -1,136 +1,61 @@
 @charset "utf-8";
 @import "mybulma/bulma.sass";
 
+// Sobrescribe la variable de color primario después de importar Bulma
+$primary: #303030;
+$secondary: #1b1b1b;
+$title-color: white;
 
-/*
-body {
-    font-family: 'Arial', sans-serif;
+// Resto de tus estilos personalizados aquí
+#navMenu {
+  height: 120px;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Asegura que el header esté encima de otros elementos *
-    // Agrega estilos adicionales según tus necesidades
+// Estilo para la barra de navegación y el pie de página
+.navbar.is-primary, .footer {
+  background-color: $primary;
 }
 
-.container {
-    display: flex;
-}
-
-.menu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 900; /* Asegura que el menú esté encima del contenido principal *
-    // Agrega estilos adicionales según tus necesidades
-}
-
-.main-content {
-    flex-grow: 1;
-    margin-left: 240px; /* Ancho del menú lateral *
-    padding: 20px; /* Espaciado interior del contenido principal *
-    // Agrega estilos adicionales según tus necesidades
-}
-
+// Estilo para el texto del pie de página
 .footer {
-    // Agrega estilos según tus necesidades
+  color: white;
 }
-*/
 
-:root{
-    ::-webkit-scrollbar{height:10px;width:10px}::-webkit-scrollbar-track{background:#efefef;border-radius:6px}::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:6px}::-webkit-scrollbar-thumb:hover{background:#c4c4c4}
-    }
-    html, body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-      height: 100%;
-      background: #ECF0F3;
-    }
-    nav.navbar {
-      border-top: 4px solid #ffae00;
-      margin-bottom: 1rem;
-    }
-    .navbar-item.brand-text {
-      font-weight: 300;
-    }
-    .navbar-item, .navbar-link {
-      font-size: 14px;
-      font-weight: 700;
-    }
-    .container {
-        height: 100px; /* Cambia a la anchura deseada */
-      }
-      #containerContenido {
-        margin-top: 3%;
-        text-align: center; /* Centra el contenido */
-      }
-      #containerContenido h1 {
-        margin-top: 2%;
-font-size: 35px;
-      }
-    .columns {
-      width: 100%;
-      height: 100%;
-      margin-left: 0;
-    }
-    .menu-label {
-      color: #8F99A3;
-      letter-spacing: 1.3;
-      font-weight: 700;
-    }
-    .menu-list a {
-      color: #0F1D38;
-      font-size: 14px;
-      font-weight: 700;
-    }
-    .menu-list a:hover {
-      background-color: transparent;
-      color: #276cda;
-    }
-    .menu-list a.is-active {
-      background-color: transparent;
-      color: #276cda;
-      font-weight: 700;
-    }
-    .card {
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
-      margin-bottom: 2rem;
-    }
-    .card-header-title {
-      color: #8F99A3;
-      font-weight: 400;
-    }
-    .info-tiles {
-      margin: 1rem 0;
-    }
-    .info-tiles .subtitle {
-      font-weight: 300;
-      color: #8F99A3;
-    }
-    .hero.welcome.is-info {
-      background: #dc9436;
-    }
-    .hero.welcome .title, .hero.welcome .subtitle {
-      color: hsl(192, 17%, 99%);
-    }
-    .card .content {
-      font-size: 14px;
-    }
-    .card-footer-item {
-      font-size: 14px;
-      font-weight: 700;
-      color: #8F99A3;
-    }
-    .card-footer-item:hover {
-    }
-    .card-table .table {
-      margin-bottom: 0;
-    }
-    .events-card .card-table {
-      max-height: 250px;
-      overflow-y: scroll;
-    }
+// Estilo para los títulos con clase "is-capitalized" y margen izquierdo
+.title.is-capitalized.pl-4 {
+  color: $title-color;
+}
+
+// Estilo para los elementos de la barra de navegación al pasar el ratón
+.navbar-item {
+  &:hover {
+    background-color: $secondary !important; // Usa !important para asegurar que se aplique
+  }
+}
+
+// Estilo para el menú desplegable de la barra de navegación al pasar el ratón
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown {
+  background-color: $secondary !important;
+}
+
+// Estilo para el enlace del menú desplegable de la barra de navegación al pasar el ratón
+.navbar-item.has-dropdown.is-hoverable:hover .navbar-link {
+  background-color: $secondary !important;
+}
+
+// Estilo para los elementos del menú desplegable de la barra de navegación
+.navbar-item.has-dropdown.is-hoverable .navbar-dropdown .navbar-item {
+  background-color: $primary !important;
+  color: $white !important; // Puedes ajustar el color del texto según tus preferencias
+}
+
+// Estilo para los elementos del menú desplegable al pasar el ratón
+.navbar-item.has-dropdown.is-hoverable .navbar-dropdown .navbar-item:hover {
+  background-color: white !important;
+  color: $primary !important; // Puedes ajustar el color del texto según tus preferencias
+}
+
+// Estilo para los enlaces dentro del contenido de las tarjetas
+.card-content a {
+  color: $primary !important;
+}
